@@ -1,0 +1,20 @@
+from django.core.paginator import Paginator
+objects = ['Ravi','Kumar','Krishna','Mohan']
+p = Paginator(objects,2)
+print(p.count)
+print(p.num_pages)
+p1 = p.page(1)
+print(p1)
+print(p1.object_list)
+p2 = p.page(2)
+print(p2)
+print(p2.object_list)
+
+print(p2.has_other_pages())
+print(p2.start_index())
+print(p2.end_index())
+print(p2.number)
+print(p2.__getitem__(0))
+print(p2.__len__())
+print(p2.__repr__())
+print(p2.__getitem__())
